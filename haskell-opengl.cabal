@@ -1,0 +1,87 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 13b4fa32715b72855db85b34e16a04af7bc38a48654be7322607bac825653827
+
+name:           haskell-opengl
+version:        0.1.0.0
+homepage:       https://github.com/githubuser/haskell-opengl#readme
+bug-reports:    https://github.com/githubuser/haskell-opengl/issues
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-opengl
+
+library
+  exposed-modules:
+      Aliased.GL
+      Aliased.StateVar
+      Assets.Loading
+      Assets.Wavefront
+      Constants
+      Events
+      GameM
+      Misc.QuasiQuotes
+      Misc.Utils
+      Shaders.Compile
+      Shaders.Source
+      State
+      Window
+  other-modules:
+      Paths_haskell_opengl
+  hs-source-dirs:
+      src
+  build-depends:
+      OpenGL
+    , OpenGLRaw
+    , StateVar
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , halive
+    , microlens-platform
+    , microlens-th
+    , pretty-simple
+    , relude
+    , sdl2
+    , template-haskell
+    , vector
+    , wavefront
+  default-language: Haskell2010
+
+executable haskell-opengl
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_opengl
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -optl-mconsole -O2
+  build-depends:
+      OpenGL
+    , OpenGLRaw
+    , StateVar
+    , attoparsec
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , halive
+    , haskell-opengl
+    , microlens-platform
+    , microlens-th
+    , pretty-simple
+    , relude
+    , sdl2
+    , template-haskell
+    , vector
+    , wavefront
+  default-language: Haskell2010
